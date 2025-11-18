@@ -1,0 +1,31 @@
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Apellido" [(ngModel)]="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Correo" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="full" (click)="registrar()">
+    Crear cuenta
+  </ion-button>
+
+  <ion-button expand="full" fill="clear" routerLink="/login">
+    Ya tengo cuenta
+  </ion-button>
+
+</ion-content>

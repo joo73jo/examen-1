@@ -1,0 +1,10 @@
+<ion-content>
+  <ion-list>
+    <ion-item><ion-input placeholder="Nombre" [(ngModel)]="nombre"></ion-input></ion-item>
+    <ion-item><ion-input placeholder="Precio" type="number" [(ngModel)]="precio"></ion-input></ion-item>
+    <ion-item><ion-input placeholder="Datos" [(ngModel)]="datos"></ion-input></ion-item>
+    <ion-item><input type="file" (change)="onFile($event)" /></ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="crear()">Crear</ion-button>
+</ion-content>

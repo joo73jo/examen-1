@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let m of mensajes">
+      <ion-label>
+        <b *ngIf="m.es_asesor">Tú:</b>
+        <b *ngIf="!m.es_asesor">Cliente:</b>
+        {{ m.mensaje }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input [(ngModel)]="nuevo" placeholder="Escribe..."></ion-input>
+    <ion-button (click)="enviar()">Enviar</ion-button>
+  </ion-item>
+</ion-content>

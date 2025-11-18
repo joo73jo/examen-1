@@ -1,0 +1,28 @@
+:host {
+  ion-content {
+    padding: 10px;
+  }
+
+  ion-item {
+    --background: #3a3f4c;
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+
+  ion-thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+
+  ion-label h3 {
+    color: #e5e9f0;
+    font-weight: 600;
+  }
+
+  ion-label p {
+    color: #9aa0ac;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}

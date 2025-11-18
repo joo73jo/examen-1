@@ -1,0 +1,23 @@
+:host {
+  ion-content {
+    padding: 20px;
+  }
+
+  ion-list {
+    background: transparent !important;
+  }
+
+  ion-item {
+    margin-bottom: 14px;
+    --background: #3a3f4c;
+    border-radius: 18px;
+  }
+
+  ion-input {
+    padding: 12px;
+  }
+
+  ion-button {
+    margin-top: 20px;
+  }
+}

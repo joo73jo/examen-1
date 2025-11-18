@@ -1,0 +1,47 @@
+<ion-content>
+
+  <ion-spinner *ngIf="cargando" style="display:block; margin: 50px auto;"></ion-spinner>
+
+  <ng-container *ngIf="!cargando && plan">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ plan.nombre_comercial }}</ion-card-title>
+        <ion-card-subtitle>${{ plan.precio_mensual }} / mes</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div style="text-align:center" *ngIf="plan.imagen_url">
+          <img [src]="plan.imagen_url" style="max-width: 100%; border-radius: 12px; margin-bottom: 16px;" />
+        </div>
+
+        <p><strong>Segmento:</strong> {{ plan.segmento }}</p>
+        <p><strong>Público objetivo:</strong> {{ plan.publico_objetivo }}</p>
+
+        <p><strong>Datos:</strong> {{ plan.datos_moviles }}</p>
+        <p><strong>Minutos:</strong> {{ plan.minutos_voz }}</p>
+        <p><strong>SMS:</strong> {{ plan.sms }}</p>
+        <p><strong>Redes sociales:</strong> {{ plan.redes_sociales }}</p>
+        <p><strong>WhatsApp:</strong> {{ plan.whatsapp }}</p>
+        <p><strong>Llamadas internacionales:</strong> {{ plan.llamadas_internacionales }}</p>
+        <p><strong>Roaming:</strong> {{ plan.roaming }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- BOTÓN PARA USUARIO REGISTRADO -->
+    <div *ngIf="esUsuarioRegistrado" style="padding: 16px;">
+      <ion-button expand="full" color="primary" (click)="contratar()">
+        Contratar este plan
+      </ion-button>
+    </div>
+
+    <!-- INVITADO: LLÉVALO A LOGIN -->
+    <div *ngIf="!esUsuarioRegistrado" style="padding: 16px;">
+      <ion-button expand="full" color="primary" routerLink="/login">
+        Inicia sesión para contratar
+      </ion-button>
+    </div>
+
+  </ng-container>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-content>
+
+  <ion-spinner *ngIf="cargando" style="display:block; margin: 40px auto;"></ion-spinner>
+
+  <ion-list *ngIf="!cargando && contrataciones.length > 0">
+    <ion-item *ngFor="let c of contrataciones">
+      <ion-label>
+        <h2>Plan: {{ c.planes_moviles?.nombre_comercial }}</h2>
+        <p>Precio: ${{ c.planes_moviles?.precio_mensual }}</p>
+        <p>Estado: {{ c.estado }}</p>
+        <p>Fecha: {{ c.fecha_solicitud | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!cargando && contrataciones.length === 0" style="text-align:center; margin-top:40px;">
+    <h3>No hay contrataciones registradas</h3>
+  </div>
+
+</ion-content>

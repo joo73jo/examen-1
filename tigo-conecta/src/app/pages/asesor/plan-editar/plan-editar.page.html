@@ -1,0 +1,18 @@
+<ion-content *ngIf="plan">
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="plan.nombre_comercial" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="plan.precio_mensual" placeholder="Precio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="plan.datos_gb" placeholder="Datos"></ion-input>
+    </ion-item>
+    <ion-item>
+      <input type="file" (change)="onFile($event)" />
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="guardar()">Guardar</ion-button>
+</ion-content>

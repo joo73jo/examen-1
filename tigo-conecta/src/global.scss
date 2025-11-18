@@ -1,0 +1,105 @@
+/* Fuente global */
+* {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Fondo general oscuro elegante */
+ion-content {
+  --background: #2c2f38;
+}
+
+/* Tarjetas estilo panel futurista */
+.card {
+  background: #3a3f4c;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+/* Textos */
+h1, h2, h3, h4, h5 {
+  color: #e5e9f0;
+  font-weight: 600;
+}
+
+p, ion-label {
+  color: #cdd3df !important;
+  font-weight: 300;
+}
+
+/* Lista */
+ion-list {
+  background: transparent !important;
+}
+
+ion-item {
+  --background: #3a3f4c;
+  border-radius: 16px;
+  margin: 8px 0;
+}
+
+/* Inputs */
+ion-input, ion-textarea {
+  --background: #3a3f4c;
+  padding: 12px;
+  border-radius: 16px;
+  color: #fff;
+
+  --placeholder-color: #c1c6d0;
+  --color: #fff;
+}
+
+/* Botones estilo futurista */
+ion-button {
+  --background: linear-gradient(90deg, #0095ff, #66cfff);
+  --border-radius: 14px;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  --color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 6px 18px rgba(0,115,255,0.35);
+}
+
+ion-button[fill="clear"] {
+  --color: #66cfff;
+  --background: transparent;
+}
+
+/* Headers */
+ion-toolbar {
+  --background: #2c2f38;
+  --color: #fff;
+  border-bottom: 1px solid #404450;
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+/* Mini-botones flotantes */
+.fab-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #0095ff, #66cfff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,115,255,0.4);
+}
+
+/* Imágenes */
+ion-thumbnail img {
+  border-radius: 18px;
+}
+
+/* Paneles estilo sidebar (como tu foto) */
+.side-panel {
+  width: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #66cfff, #0095ff);
+  margin-right: 12px;
+}

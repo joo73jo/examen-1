@@ -1,0 +1,27 @@
+:host {
+
+  .card {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .plan-img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+    color: #66cfff;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+}

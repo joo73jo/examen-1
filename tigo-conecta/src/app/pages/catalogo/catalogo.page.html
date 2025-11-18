@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="side-panel"></div>
+
+  <!-- LOADER MIENTRAS CARGA -->
+  <ion-spinner *ngIf="cargando" style="display:block; margin: 50px auto;"></ion-spinner>
+
+  <!-- SIN PLANES -->
+  <div *ngIf="!cargando && planes.length === 0" style="text-align:center; margin-top:30px;">
+    <h2>No hay planes disponibles</h2>
+    <p>Ingresa o prueba más tarde.</p>
+
+    <!-- Este botón solo tiene sentido para INVITADO -->
+    <ion-button
+      *ngIf="!esUsuarioRegistrado"
+      routerLink="/login"
+      color="primary"
+      style="margin-top:20px;"
+    >
+      Iniciar sesión
+    </ion-button>
+  </div>
+
+  <!-- LISTA DE PLANES -->
+  <ion-list *ngIf="!cargando && planes.length > 0">
+    <ion-item *ngFor="let p of planes" (click)="verDetalle(p.id)">
+      <ion-thumbnail slot="start" *ngIf="p.imagen_url">
+        <img [src]="p.imagen_url" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ p.nombre_comercial }}</h2>
+        <p>${{ p.precio_mensual }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- BOTÓN DE INICIAR SESIÓN SIEMPRE VISIBLE SOLO PARA INVITADO -->
+  <div *ngIf="!esUsuarioRegistrado" style="padding: 20px;">
+    <ion-button expand="full" routerLink="/login" color="primary">
+      Iniciar sesión
+    </ion-button>
+  </div>
+
+</ion-content>
